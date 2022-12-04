@@ -1,0 +1,682 @@
+# i3 config file (v4)
+set $ws_desktop "0:Desktop"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $2ws_desktop "10:Desktop"
+set $2ws1 "11"
+set $2ws2 "12"
+set $2ws3 "13"
+set $2ws4 "14"
+set $2ws5 "15"
+set $2ws6 "16"
+set $2ws7 "17"
+set $2ws8 "18"
+set $2ws9 "19"
+set $wsNet "20:Net"
+set $2wsNet "21:Net2"
+set $wsEm "22:Emails"
+set $wsCode "23:Code"
+set $wsHW "24:Homework"
+set $wsGames "25:Games"
+set $wsGVE "26:Editing"
+set $wsSteam "27:Steam"
+set $wsComm "28:Discord"
+#set $wsGVE "14:Graphics/Video Editing"
+
+workspace $ws_desktop output primary
+workspace $ws1 output primary
+workspace $ws2 output primary
+workspace $ws3 output primary
+workspace $ws4 output primary
+workspace $ws5 output primary
+workspace $ws6 output primary
+workspace $ws7 output primary
+workspace $ws8 output primary
+workspace $ws9 output primary
+workspace $2ws_desktop output DVI-D-0
+workspace $2ws1 output DVI-D-0
+workspace $2ws2 output DVI-D-0
+workspace $2ws3 output DVI-D-0
+workspace $2ws4 output DVI-D-0
+workspace $2ws5 output DVI-D-0
+workspace $2ws6 output DVI-D-0
+workspace $2ws7 output DVI-D-0
+workspace $2ws8 output DVI-D-0
+workspace $2ws9 output DVI-D-0
+workspace $wsNet output primary
+workspace $2wsNet output DVI-D-0
+workspace $wsEm output DVI-D-0
+workspace $wsCode output primary
+workspace $wsHW output primary
+workspace $wsGames output primary
+workspace $wsGVE output primary
+workspace $wsSteam output primary
+workspace $wsComm output DVI-D-0
+
+#set $2ws_desktop "0:Desktop"
+#set $2ws1 "1"
+#set $2ws2 "2"
+#set $2ws3 "3"
+#set $2ws4 "4"
+#set $2ws5 "5"
+#set $2ws6 "6"
+#set $2ws7 "7"
+#set $2ws8 "8"
+#set $2ws9 "9"
+#set $2wsNet "10:Net"
+#set $2wsEm "11:Emails"
+#set $2wsCode "12:Code"
+#set $2wsHW "13:Homework"
+#set $2wsGames "14:Games"
+#set $2wsGVE "15:Editing"
+#set $2wsSteam "16:Steam"
+#set $2wsComm "17:Discord"
+##set $2wsGVE "14:Graphics/Video Editing"
+#
+#
+#workspace $2ws_desktop output HDMI-0
+#workspace $2ws1 output HDMI-0
+#workspace $2ws2 output HDMI-0
+#workspace $2ws3 output HDMI-0
+#workspace $2ws4 output HDMI-0
+#workspace $2ws5 output HDMI-0
+#workspace $2ws6 output HDMI-0
+#workspace $2ws7 output HDMI-0
+#workspace $2ws8 output HDMI-0
+#workspace $2ws9 output HDMI-0
+#workspace $2wsNet output HDMI-0
+#workspace $2wsEm output HDMI-0
+#workspace $2wsCode output HDMI-0
+#workspace $2wsHW output HDMI-0
+#workspace $2wsGames output HDMI-0
+#workspace $2wsGVE output HDMI-0
+#workspace $2wsSteam output HDMI-0
+#workspace $2wsComm output HDMI-0
+
+set $win Mod4
+set $alt Mod1
+set $term_class "Termite"
+#set $on_off_bar pb_down_up
+#set $on_off_bar mapunmap_polybar.sh 
+#set $on_off_bar pb_hide
+gaps inner 20
+#font xft:Fira Code 9
+font pango:Tw Cen MT Normal 10
+
+exec --no-startup-id i3-msg 'workspace $wsComm; append_layout /home/koraynilay/.config/i3/layouts/wsComm.json;workspace 1'
+exec --no-startup-id autostart.sh
+exec_always --no-startup-id autostart.sh always
+
+#exec --no-startup-id xss-lock lock.sh
+#exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpapers/landscape_2_dark.png
+#exec_always --no-startup-id ~/savery_start.sh
+
+
+#exec --no-startup-id conky
+#exec --no-startup-id /usr/lib/kdeconnectd
+#exec --no-startup-id /home/koraynilay/linux-custom-scripts/start_nomachine_nxserver start
+
+#exec --no-startup-id lock.sh
+#exec --no-startup-id scrnsvr 20 lock.sh sleeper.sh
+#exec --no-startup-id xmodmap -e 'add mod3 = Scroll_Lock'
+
+
+#exec_always --no-startup-id xset led named "Scroll Lock" on
+#exec_always --no-startup-id numlockx on
+#exec_always --no-startup-id setxkbmap us,it -option grp:shift_caps_toggle
+#exec_always --no-startup-id ~/.config/picom_launch.sh
+#exec_always --no-startup-id ~/.config/polybar/launch.sh
+#exec_always --no-startup-id ~/.config/dunst/dunst_launch.sh
+#exec_always --no-startup-id ~/.fehbg
+
+
+#exec --no-startup-id dunstify 1
+#exec --no-startup-id dunstify 2
+#exec --no-startup-id dunstify 3
+#exec --no-startup-id dunstify 4
+
+#exec --no-startup-id copyq #parcellite
+#exec --no-startup-id idesk
+#exec --no-startup-id guake
+#exec --no-startup-id ferdium
+#exec --no-startup-id discord
+#exec --no-startup-id steam
+#exec --no-startup-id gwe
+#exec --no-startup-id check_upds_cycle.sh
+#exec --no-startup-id mapunmap_updates.sh start
+#exec --no-startup-id chrome_tabs_keep start_pc
+
+#exec leafpad ~/DA_FARE.txt
+
+#
+for_window [title="(?i)picture in picture|picture-in-picture"] floating enable, sticky enable, border none
+for_window [class="TopLevelShell|BSOD"] fullscreen enable
+for_window [class="kruler"] floating enable
+#for_window [class="Anydesk"] floating enable
+for_window [class="textractor.exe"] floating enable
+for_window [title="(?i)^normcap$"] floating enable
+for_window [class="(?i)Xpenguins"] floating enable
+for_window [class="(?i)chaoshead.exe"] floating enable
+for_window [class="kanjitomo.*"] floating enable, sticky enable, border none, no focus
+for_window [class="(?i)XEyes"] floating enable, sticky enable, border none, no focus
+for_window [class="(?i)Google Assistant"] floating enable
+no_focus [class="(?i)Google Assistant"]
+# no_focus (for windows in ~/.config/autostart.sh)
+no_focus [class="(?i)steam"]
+no_focus [title="^Steam$"]
+no_focus [class="(?i)discord"]
+no_focus [class="(?i)armcord"]
+no_focus [instance="(?i)crx_magkoliahgffibhgfkmoealggombgknl"]
+no_focus [class="(?i)ferdium"]
+no_focus [class="(?i)telegram"]
+no_focus [class="(?i)thunderbird"]
+#from https://faq.i3wm.org/question/7282/force-fullscreen-video-to-floating-window.1.html and https://www.reddit.com/r/i3wm/comments/4a66pv/youtube_floater_play_youtube_videos_in_a_floating/d0xuqlo?utm_source=share&utm_medium=web2x&context=3
+#bindsym $mod+Shift+y fullscreen disable; floating enable; resize set 400 300; sticky enable; move window to position 1515 20
+
+no_focus [class="(?i)GWE"]
+no_focus [class="(?i)Bitwarden"]
+
+
+no_focus [class="(?i)UE4Editor"]
+
+focus_on_window_activation urgent
+
+no_focus [class=$term_class title="peaclock_desktop$|^peaclock$"]
+no_focus [class=$term_class title="cava_desktop$|^cava$"]
+# ws9
+for_window [class="(?i)qutebrowser"] move container to workspace $ws9
+#no_focus [class=$term_class title="archlinux_updates_script"]
+# wsComm
+for_window [class="(?i)discord"] move container to workspace $wsComm
+for_window [class="(?i)armcord"] move container to workspace $wsComm
+for_window [instance="(?i)crx_magkoliahgffibhgfkmoealggombgknl"] move container to workspace $wsComm
+for_window [class="(?i)ferdium"] move container to workspace $wsComm
+for_window [class="(?i)telegram"] move container to workspace $wsComm
+# wsSteam
+for_window [class="(?i)steam"] move container to workspace $wsSteam
+for_window [class="(?i)lutris"] move container to workspace $wsSteam
+#for_window [class="RPCS3"] floating enable
+#for_window [class="(?i)RPCS3"] move container to workspace $wsSteam
+for_window [class="(?i)^upc"] move container to workspace $wsSteam
+for_window [instance="origin.exe|originthinsetupinternal.exe|steam_app_1182480"] move container to workspace $wsSteam, floating enable
+for_window [class="battle.net.exe"] move container to workspace $wsSteam
+# wsGames
+for_window [title="(?i)^Assassin's Creed 2$"] move container to workspace $wsGames
+for_window [title="(?i)^Assassin's Creed Unity$"] move container to workspace $wsGames
+for_window [title="(?i)^Assassin's Creed"] move container to workspace $wsGames
+for_window [title="(?i)^osu!lazer$"] move container to workspace $wsGames, fullscreen
+for_window [title="(?i)^osu!$"] move container to workspace $wsGames, fullscreen
+for_window [title="(?i)^Hollow Knight$"] move container to workspace $wsGames
+for_window [title="(?i)^Far Cry"] move container to workspace $wsGames
+for_window [class="DarkPlaces"] move container to workspace $wsGames
+for_window [class="(?i)ppsspp"] move container to workspace $wsGames
+#for_window [class="(?i)io.krunker.desktop"] move container to workspace $wsGames, fullscreen enable
+# wsGVE (graphics/editing/etc...)
+for_window [class="(?i)gimp|krita"] move container to workspace $wsGVE
+for_window [class="(?i)kdenlive|Davinci-resolve|olive"] move container to workspace $wsGVE
+for_window [class="(?i)inkscape"] move container to workspace $wsGVE
+for_window [class="(?i)musescore3"] move container to workspace $wsGVE
+# wsCode
+for_window [class="(?i)atom|code-oss"] move container to workspace $wsCode
+for_window [class="(?i)UE4Editor"] move container to workspace $wsCode
+# wsEm
+for_window [class="(?i)thunderbird|email"] move container to workspace $wsEm
+# wsNet
+for_window [instance="(?i)firefox|Google-chrome|chromium"] move container to workspace $wsNet
+#for_window [instance="crx_dhdagjlgajnmgafjlabfekbiimkbipfb"] none
+# cli stuff
+for_window [class=$term_class title="^htop$|^nethogs$|^gotop$|^nvtop$|^bandwhich$"] floating enable, resize set 1600 900, move position center, sticky enable
+for_window [class=$term_class title="CALENDAR"] floating enable, resize set 480 500, move position 1440 570, sticky enable
+for_window [class=$term_class title="^archlinux_updates_script$"] floating enable, resize set 540 640, move position 1370 430, sticky enable
+for_window [class=$term_class title="peaclock_desktop$|^peaclock$"] floating enable
+for_window [class=$term_class title="cava_desktop$|^cava$"] floating enable
+for_window [class="Dragon-drag-and-drop" title="dragon"] sticky enable
+# others
+for_window [class="Lxtask"] floating enable, resize set 1600 900, move position center, sticky enable
+for_window [class="copyq" title="CopyQ$"] floating enable, sitcky enable
+for_window [class="PacketTracer"] floating enable
+#for_window [class="(?i)GWE"] move container to scratchpad
+#for_window [title="(?i)gestore dei file|file manager"] floating enable, resize set 1000 700
+#for_window [class="(?i)thunar"] floating enable, resize set 1000 700
+for_window [title="サイコロサイコ"] border none
+for_window [class="pentablet"] floating enable
+
+# KDE
+#for_window [title="Desktop — Plasma"] kill; floating enable; border none # change this based on language
+#for_window [class="plasmashell"] floating enable;
+#for_window [class="Plasma"] floating enable; border none
+#for_window [title="plasma-desktop"] floating enable; border none
+#for_window [title="win7"] floating enable; border none
+#for_window [class="krunner"] floating enable; border none
+#for_window [class="Kmix"] floating enable; border none
+#for_window [class="Klipper"] floating enable; border none
+#for_window [class="Plasmoidviewer"] floating enable; border none
+#for_window [class="(?i)*nextcloud*"] floating disable
+#for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px
+#no_focus [class="plasmashell" window_type="notification"] 
+
+#bindcode --release 37 exec --no-startup-id find-cursor
+#bindcode --release 86 exec --no-startup-id find-cursor
+
+# media
+# # pause/next/prev
+bindsym XF86AudioPause exec --no-startup-id change_state_song.sh toggle && songstate_change_notif
+bindsym Shift+XF86AudioNext exec --no-startup-id change_state_song.sh seek +00:00:01 && songstate_change_notif
+bindsym Shift+XF86AudioPrev exec --no-startup-id change_state_song.sh seek -00:00:01 && songstate_change_notif
+bindsym XF86AudioNext exec --no-startup-id change_state_song.sh next #&& songstate_change_notif
+bindsym XF86AudioPrev exec --no-startup-id change_state_song.sh prev #&& songstate_change_notif
+
+bindsym $alt+XF86AudioPause exec --no-startup-id playerctl play-pause && songstate_change_notif_mpris
+bindsym $alt+Shift+XF86AudioNext exec --no-startup-id playerctl position seek +1 && songstate_change_notif_mpris
+bindsym $alt+Shift+XF86AudioPrev exec --no-startup-id playerctl position seek -1 && songstate_change_notif_mpris
+bindsym $alt+XF86AudioNext exec --no-startup-id playerctl next #&& songstate_change_notif_mpris
+bindsym $alt+XF86AudioPrev exec --no-startup-id playerctl previous #&& songstate_change_notif_mpris
+# # volume
+bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% && volume_change_notif && songstate_change_notif
+bindsym Shift+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% && volume_change_notif && songstate_change_notif
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% && volume_change_notif
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% && volume_change_notif
+bindsym Ctrl+XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && volume_change_notif
+bindsym Ctrl+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && volume_change_notif
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && volume_change_notif
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym $win+$alt+p exec --no-startup-id pavucontrol
+# # mpd switches
+bindsym $win+Shift+Ctrl+r exec --no-startup-id change_state_song.sh repeat
+bindsym $win+Shift+Ctrl+z exec --no-startup-id change_state_song.sh random
+bindsym $win+Shift+Ctrl+y exec --no-startup-id change_state_song.sh single
+bindsym $win+Shift+Ctrl+c exec --no-startup-id change_state_song.sh consume
+# # for discord stream
+bindsym $win+$alt+Shift+s exec --no-startup-id create_sink_for_app_xprop.sh on
+bindsym $win+$alt+Ctrl+s exec --no-startup-id create_sink_for_app_xprop.sh off
+
+#bindsym $win+Ctrl+n exec --no-startup-id np.sh
+
+
+# on/offs
+bindcode --release Shift+133 exec --no-startup-id mapunmap_polybar.sh
+bindcode --release Shift+134 exec --no-startup-id mapunmap_polybar.sh
+bindsym $win+Shift+d exec --no-startup-id mapunmap_updates.sh
+# focus
+bindsym $win+h focus left
+bindsym $win+j focus down
+bindsym $win+k focus up
+bindsym $win+l focus right
+bindsym $win+Left focus left
+bindsym $win+Down focus down
+bindsym $win+Up focus up
+bindsym $win+Right focus right
+bindsym $win+greater focus parent
+bindsym $win+Ctrl+greater focus child
+#bindsym $win+Shift+greater focus child
+# move
+bindsym $win+$alt+h move left
+bindsym $win+$alt+j move down
+bindsym $win+$alt+k move up
+bindsym $win+$alt+l move right
+bindsym $win+$alt+Left move left
+bindsym $win+$alt+Down move down
+bindsym $win+$alt+Up move up
+bindsym $win+$alt+Right move right
+
+# scratchpad
+bindsym $win+$alt+minus move scratchpad
+bindsym $win+minus scratchpad show
+
+# manipulate containers
+bindsym $win+c split h
+bindsym $win+v split v
+bindsym F11 fullscreen toggle 
+#bindsym F11 exec --no-startup-id i3fullscreen.sh
+#bindsym F11 exec --no-startup-id xdotool sleep 1 getactivewindow key F11
+floating_modifier $alt
+bindsym $win+$alt+space floating toggle
+bindsym $win+space focus mode_toggle
+bindsym $win+Shift+s sticky toggle
+
+set $kill_script i3kill.sh
+bindsym $win+q exec --no-startup-id $kill_script
+bindsym $win+Shift+q exec --no-startup-id $kill_script 18 #resume (SIGCONT)
+bindsym $win+Ctrl+q exec --no-startup-id $kill_script 19 #suspend (SIGSTOP)
+bindsym $win+Ctrl+Shift+q exec --no-startup-id $kill_script 9
+bindsym $win+$alt+Shift+x exec gksudo eth down
+bindsym $win+$alt+Shift+z exec gksudo eth up
+set $nvidia_settings_file "~/.nvidia-settings-rc-koray"
+bindsym $win+Ctrl+$alt+r exec nvidia-settings --config=$nvidia_settings_file --load-config-only
+
+bindsym $win+Shift+Ctrl+s layout stacking
+bindsym $win+Shift+Ctrl+w layout tabbed
+bindsym $win+Shift+Ctrl+e layout toggle split
+#bindsym $win+Shift+$alt+Ctrl+s workspace_layout stacking
+#bindsym $win+Shift+$alt+Ctrl+w workspace_layout tabbed
+#bindsym $win+Shift+$alt+Ctrl+e workspace_layout toggle split
+bindsym $win+Shift+c reload
+bindsym $win+Shift+r restart
+bindsym Ctrl+$alt+Delete exec --no-startup-id rofi.sh exit
+bindsym Ctrl+Shift+Delete exec --no-startup-id scrnsvr-stop
+bindsym Ctrl+Shift+Insert exec --no-startup-id scrnsvr-resume
+#bindsym $alt+l exec --no-startup-id "lock.sh"
+bindsym $alt+l exec --no-startup-id "scrnsvr-resume; scrnsvr l"
+# modes
+bindsym $win+$alt+r mode "resize"
+bindsym $win+Ctrl+v mode "move"
+bindsym $win+Ctrl+u mode "typing"; exec --no-startup-id /home/koraynilay/linux-custom-scripts/switch_typing.sh on
+# resize gaps
+bindsym $win+Ctrl+Shift+plus gaps inner current plus 5
+bindsym $win+Ctrl+Shift+minus gaps inner current minus 5
+bindsym $win+Ctrl+$alt+plus gaps outer current plus 5
+bindsym $win+Ctrl+$alt+minus gaps outer current minus 5
+bindsym $win+Shift+plus gaps inner current set 20
+bindsym $win+Shift+minus gaps inner current set 0
+
+# Terminal related
+bindsym $win+Return exec --no-startup-id i3-sensible-terminal
+bindsym $win+Ctrl+j exec --no-startup-id i3-sensible-terminal
+bindsym $win+KP_Enter exec --no-startup-id i3-sensible-terminal
+bindsym $win+Shift+Return exec --no-startup-id /home/koraynilay/linux-custom-scripts/termite_new_window
+bindsym Ctrl+Shift+Escape exec --no-startup-id termite -e htop
+bindsym Ctrl+$alt+Escape exec --no-startup-id termite -e bandwhich #nethogs
+bindsym Ctrl+$win+Shift+Escape exec --no-startup-id termite -e nvtop
+bindsym Ctrl+$alt+Shift+Escape exec --no-startup-id termite -e gotop
+bindsym $win+m exec --no-startup-id termite -e ncmpcpp
+
+# file manager
+bindsym $win+$alt+e exec --no-startup-id dolphin #pcmanfm-qt #thunar #termite -e ranger
+
+# browser (wsNet)
+# # Blink-based browsers
+# # # Chromium (chromium)
+#bindsym $win+$alt+f exec --no-startup-id chromium --profile-directory="Default" #firefox #google-chrome-stable
+#bindsym $win+$alt+b exec --no-startup-id chromium --profile-directory="Profile 1"
+#bindsym $win+$alt+i exec --no-startup-id chromium --incognito --profile-directory="Default"
+# # # Google Chrome (google-chrome)
+bindsym $win+$alt+f exec --no-startup-id google-chrome-stable --profile-directory="Default"
+bindsym $win+$alt+b exec --no-startup-id google-chrome-stable --profile-directory="Profile 1"
+bindsym $win+$alt+i exec --no-startup-id google-chrome-stable --incognito --profile-directory="Default"
+# # # Brave (brave-bin)
+#bindsym $win+$alt+f exec --no-startup-id brave --profile-directory="Default"
+#bindsym $win+$alt+b exec --no-startup-id brave --profile-directory="Profile 1"
+#bindsym $win+$alt+i exec --no-startup-id brave --incognito --profile-directory="Default"
+# # non-Blink-based browsers
+# # # Firefox (firefox)
+#bindsym $win+$alt+f exec --no-startup-id firefox #--profile-directory="Default" # fix --profile-directory for firefox
+#bindsym $win+$alt+b exec --no-startup-id firefox #--profile-directory="Profile 1"
+#bindsym $win+$alt+i exec --no-startup-id firefox --private-window --profile-directory="Default"
+
+# wsEm
+bindsym $win+$alt+y exec --no-startup-id thunderbird
+# wsGVE
+bindsym $win+$alt+g exec --no-startup-id gimp
+bindsym $win+$alt+o exec --no-startup-id viewnior ~/lns/grassi/orario_scuola.png
+# wsComm
+bindsym $win+$alt+d exec --no-startup-id discord
+#bindsym $win+$alt+Shift+d exec --no-startup-id open_desktop ~/Desktop/discord-chrome-magkoliahgffibhgfkmoealggombgknl-Default.desktop
+#bindsym $win+$alt+Shift+d exec --no-startup-id discord
+bindsym $win+$alt+Shift+d exec --no-startup-id armcord
+bindsym $win+$alt+w exec --no-startup-id ferdium
+bindsym $win+$alt+t exec --no-startup-id telegram-desktop
+# wsCode
+bindsym $win+$alt+z exec --no-startup-id code
+# wsSteam
+bindsym $win+$alt+s exec --no-startup-id steam_console.sh
+bindsym $win+$alt+u exec --no-startup-id LUTRIS_ENABLE_PROTON=1 lutris
+
+# others
+bindsym $win+$alt+c exec --no-startup-id speedcrunch
+bindsym $win+n exec --no-startup-id l3afpad #leafpad
+bindsym $win+r exec --no-startup-id rofi.sh run #>~/rofi_out 2>&1
+bindsym $win+w exec --no-startup-id rofi.sh show
+bindsym $win+$alt+m exec --no-startup-id mediahuman-ytmp3
+bindsym $win+$alt+n exec --no-startup-id freedownloadmanager_fdm
+#bindsym $win+w exec --no-startup-id i3-layout-manager
+
+#set $slop_opts -l -c 0.2,0,0.15,0.3 -b 1.5 -k -D
+#bindsym Print exec --no-startup-id "maim \\"$HOME/Pictures/screens/$(date +%d-%m-%Y_%H-%M-%S).png\\" && dunstify -a maim \\"screenshot in ~/Pictures/screens\\""
+#bindsym --release Shift+Print exec --no-startup-id "maim -s $slop_opts \\"$HOME/Pictures/screens/$(date +%d-%m-%Y_%H-%M-%S).png\\" && dunstify -a maim \\"screenshot in ~/Pictures/screens\\""
+
+# screenshot
+bindsym Print exec --no-startup-id /home/koraynilay/linux-custom-scripts/screencap.sh shot
+bindsym Shift+Print exec --no-startup-id /home/koraynilay/linux-custom-scripts/screencap.sh shots
+bindsym $win+Print exec --no-startup-id /home/koraynilay/linux-custom-scripts/screencap.sh shotw
+
+# screencast
+bindsym Ctrl+Print exec --no-startup-id /home/koraynilay/linux-custom-scripts/screencap.sh cast
+bindsym Ctrl+Shift+Print exec --no-startup-id /home/koraynilay/linux-custom-scripts/screencap.sh casts
+bindsym Ctrl+$win+Print exec --no-startup-id /home/koraynilay/linux-custom-scripts/screencap.sh castw
+# screencast manipulate rec
+bindsym Ctrl+Insert exec --no-startup-id /home/koraynilay/linux-custom-scripts/screencap.sh toggle_rec
+bindsym Ctrl+End exec --no-startup-id /home/koraynilay/linux-custom-scripts/screencap.sh stop_rec
+bindsym Ctrl+$win+Delete exec --no-startup-id /home/koraynilay/linux-custom-scripts/screencap.sh cancel_rec
+
+#bindsym Print exec --no-startup-id scrot '%d-%m-%Y_%H-%M-%S.png' -e 'mv $f /home/koraynilay/Pictures/screens' && dunstify -a scrot "screenshot in ~/Pictures/screens" #%h:%min:%secs
+#bindsym --release Shift+Print exec --no-startup-id scrot -s -f '%Y-%m-%d_%H-%M-%S.png' -e 'mv $f /home/koraynilay/Pictures/screens' && dunstify -a scrot "screenshot in ~/Pictures/screens" #%h:%min:%secs + select
+# ocr_jp.sh (for visual novels/manga)
+bindsym $win+Shift+w exec --no-startup-id /home/koraynilay/linux-custom-scripts/ocr_jp.sh
+
+# dunstctl
+bindsym $win+grave exec --no-startup-id dunstctl close
+bindsym $win+$alt+grave exec --no-startup-id dunstctl close-all
+bindsym Ctrl+grave exec --no-startup-id dunstctl history-pop
+bindsym Ctrl+Shift+$alt+space exec --no-startup-id dunstctl action
+
+# open configs with keybinds
+#bindsym $win+grave exec --no-startup-id termite -e "vim /home/koraynilay/.config/i3/config"
+#bindsym $win+Shift+grave exec --no-startup-id termite -e "vim /home/koraynilay/.config/polybar/config"
+#bindsym $win+Ctrl+grave exec --no-startup-id termite -e "vim /home/koraynilay/.config/picom.conf"
+
+#; exec --no-startup-id /home/koraynilay/linux-custom-scripts/lw
+
+# workspaces
+#bindsym $win+Tab exec --no-startup-id i3expo -s
+# # focus
+bindsym $win+Ctrl+Right workspace next_on_output
+bindsym $win+Ctrl+Left workspace prev_on_output
+bindsym $win+t workspace next_on_output
+bindsym $win+b workspace prev_on_output
+#bindsym $win+Ctrl+k workspace next_on_output
+#bindsym $win+Ctrl+j workspace prev_on_output
+bindsym $win+Ctrl+l workspace next_on_output
+bindsym $win+Ctrl+h workspace prev_on_output
+# # # 1st monitor
+bindsym $win+1 workspace number $ws1 
+bindsym $win+2 workspace number $ws2 
+bindsym $win+3 workspace number $ws3 
+bindsym $win+4 workspace number $ws4
+bindsym $win+5 workspace number $ws5
+bindsym $win+6 workspace number $ws6
+bindsym $win+7 workspace number $ws7
+bindsym $win+8 workspace number $ws8
+bindsym $win+9 workspace number $ws9
+# # # 2nd monitor
+bindsym $win+Shift+1 workspace number $2ws1 
+bindsym $win+Shift+2 workspace number $2ws2 
+bindsym $win+Shift+3 workspace number $2ws3 
+bindsym $win+Shift+4 workspace number $2ws4
+bindsym $win+Shift+5 workspace number $2ws5
+bindsym $win+Shift+6 workspace number $2ws6
+bindsym $win+Shift+7 workspace number $2ws7
+bindsym $win+Shift+8 workspace number $2ws8
+bindsym $win+Shift+9 workspace number $2ws9
+# # # 1st monitor
+bindsym $win+f workspace number $wsNet
+# # # 2nd monitor
+bindsym $win+Shift+f workspace number $2wsNet
+# # # mixed, check in the variable declaration for monitor placement
+bindsym $win+y workspace number $wsEm
+bindsym $win+z workspace number $wsCode 
+bindsym $win+g workspace number $wsHW
+bindsym $win+e workspace number $wsGames
+bindsym $win+x workspace number $wsGVE
+bindsym $win+s workspace number $wsSteam
+bindsym $win+d workspace number $wsComm
+#bindsym $win+greater workspace number $ws_desktop
+#bindsym $win+grave workspace number $ws_desktop
+bindsym $win+a workspace number $ws_desktop
+bindsym $win+Shift+grave workspace number $2ws_desktop
+bindsym $win+Shift+a workspace number $2ws_desktop
+# # move containers
+# # # 1st monitor
+bindsym $win+Ctrl+1 move container to workspace number $ws1
+bindsym $win+Ctrl+2 move container to workspace number $ws2
+bindsym $win+Ctrl+3 move container to workspace number $ws3
+bindsym $win+Ctrl+4 move container to workspace number $ws4
+bindsym $win+Ctrl+5 move container to workspace number $ws5
+bindsym $win+Ctrl+6 move container to workspace number $ws6
+bindsym $win+Ctrl+7 move container to workspace number $ws7
+bindsym $win+Ctrl+8 move container to workspace number $ws8
+bindsym $win+Ctrl+9 move container to workspace number $ws9
+# # # 2nd monitor
+bindsym $win+Ctrl+$alt+1 move container to workspace number $2ws1
+bindsym $win+Ctrl+$alt+2 move container to workspace number $2ws2
+bindsym $win+Ctrl+$alt+3 move container to workspace number $2ws3
+bindsym $win+Ctrl+$alt+4 move container to workspace number $2ws4
+bindsym $win+Ctrl+$alt+5 move container to workspace number $2ws5
+bindsym $win+Ctrl+$alt+6 move container to workspace number $2ws6
+bindsym $win+Ctrl+$alt+7 move container to workspace number $2ws7
+bindsym $win+Ctrl+$alt+8 move container to workspace number $2ws8
+bindsym $win+Ctrl+$alt+9 move container to workspace number $2ws9
+# # # mixed, check in the variable declaration for monitor placement
+bindsym $win+Ctrl+f move container to workspace number $wsNet
+bindsym $win+Ctrl+$alt+f move container to workspace number $2wsNet
+bindsym $win+Ctrl+y move container to workspace number $wsEm
+bindsym $win+Ctrl+z move container to workspace number $wsCode 
+bindsym $win+Ctrl+g move container to workspace number $wsHW
+bindsym $win+Ctrl+e move container to workspace number $wsGames
+bindsym $win+Ctrl+x move container to workspace number $wsGVE
+bindsym $win+Ctrl+s move container to workspace number $wsSteam
+bindsym $win+Ctrl+d move container to workspace number $wsComm
+
+workspace_auto_back_and_forth false
+#workspace_auto_back_and_forth true
+
+# colors
+# class				border	backgr.	text	indicator child_border
+#client.focused			#c50ed2	#c50ed2 #ffffff	#f50ff2 #sweet theme
+client.focused			#ff0000	#ff0000 #ffffff	#ff1010
+client.unfocused		#202020	#000000	#aaaaaa	#ff1010
+client.focused_inactive		#404040 #000000	#aaaaaa	#050505
+client.urgent			#ffff00	#ffff00	#ffffff	#ff1010
+#client.background		#123456
+default_border pixel 2
+default_floating_border pixel 2
+# for https://github.com/i3/i3/issues/5149
+#for_window [all] border pixel 2
+
+# modes declaration
+# # move mouse with keyboard
+mode "move" {
+	# Arrows
+	bindsym Left exec --no-startup-id xdotool mousemove_relative -- -1 0
+	bindsym Right exec --no-startup-id xdotool mousemove_relative -- 1 0
+	bindsym Down exec --no-startup-id xdotool mousemove_relative -- 0 1
+	bindsym Up exec --no-startup-id xdotool mousemove_relative -- 0 -1
+
+	bindsym Shift+Left exec --no-startup-id xdotool mousemove_relative -- -10 0
+	bindsym Shift+Right exec --no-startup-id xdotool mousemove_relative -- 10 0
+	bindsym Shift+Down exec --no-startup-id xdotool mousemove_relative -- 0 10
+	bindsym Shift+Up exec --no-startup-id xdotool mousemove_relative -- 0 -10
+
+	bindsym Shift+Ctrl+Left exec --no-startup-id xdotool mousemove_relative -- -50 0
+	bindsym Shift+Ctrl+Right exec --no-startup-id xdotool mousemove_relative -- 50 0
+	bindsym Shift+Ctrl+Down exec --no-startup-id xdotool mousemove_relative -- 0 50
+	bindsym Shift+Ctrl+Up exec --no-startup-id xdotool mousemove_relative -- 0 -50
+
+	bindsym Ctrl+Left exec --no-startup-id xdotool mousemove_relative -- -100 0
+	bindsym Ctrl+Right exec --no-startup-id xdotool mousemove_relative -- 100 0
+	bindsym Ctrl+Down exec --no-startup-id xdotool mousemove_relative -- 0 100
+	bindsym Ctrl+Up exec --no-startup-id xdotool mousemove_relative -- 0 -100
+
+	# hjkl
+	bindsym h exec --no-startup-id xdotool mousemove_relative -- -1 0
+	bindsym l exec --no-startup-id xdotool mousemove_relative -- 1 0
+	bindsym j exec --no-startup-id xdotool mousemove_relative -- 0 1
+	bindsym k exec --no-startup-id xdotool mousemove_relative -- 0 -1
+
+	bindsym Shift+h exec --no-startup-id xdotool mousemove_relative -- -10 0
+	bindsym Shift+l exec --no-startup-id xdotool mousemove_relative -- 10 0
+	bindsym Shift+j exec --no-startup-id xdotool mousemove_relative -- 0 10
+	bindsym Shift+k exec --no-startup-id xdotool mousemove_relative -- 0 -10
+
+	bindsym Shift+Ctrl+h exec --no-startup-id xdotool mousemove_relative -- -50 0
+	bindsym Shift+Ctrl+l exec --no-startup-id xdotool mousemove_relative -- 50 0
+	bindsym Shift+Ctrl+j exec --no-startup-id xdotool mousemove_relative -- 0 50
+	bindsym Shift+Ctrl+k exec --no-startup-id xdotool mousemove_relative -- 0 -50
+
+	bindsym Ctrl+h exec --no-startup-id xdotool mousemove_relative -- -100 0
+	bindsym Ctrl+l exec --no-startup-id xdotool mousemove_relative -- 100 0
+	bindsym Ctrl+j exec --no-startup-id xdotool mousemove_relative -- 0 100
+	bindsym Ctrl+k exec --no-startup-id xdotool mousemove_relative -- 0 -100
+
+	# others
+	bindsym $alt+Up exec --no-startup-id xdotool click 4
+	bindsym $alt+Down exec --no-startup-id xdotool click 5
+	bindsym $alt+Left exec --no-startup-id xdotool mousedown 1 # mouse down left
+	bindsym $alt+Right exec --no-startup-id xdotool mouseup 1 # mouse up left
+	bindsym $alt+Shift+Left exec --no-startup-id xdotool mousedown 2 # mouse down middle
+	bindsym $alt+Shift+Right exec --no-startup-id xdotool mouseup 2 # mouse up middle
+	bindsym $alt+Shift+Left exec --no-startup-id xdotool mousedown 3 # mouse down right
+	bindsym $alt+Shift+Right exec --no-startup-id xdotool mouseup 3 # mouse up right
+
+	bindsym space exec --no-startup-id xdotool click 1
+	bindsym $alt+Ctrl+space exec --no-startup-id xdotool click 2
+	bindsym Ctrl+space exec --no-startup-id xdotool click 3
+        bindsym Return mode "default"
+        bindsym $win+Ctrl+v mode "default"
+}
+
+# # resize
+mode "resize" {
+        bindsym Shift+h resize shrink width 1 px or 1 ppt
+        bindsym Shift+j resize grow height 1 px or 1 ppt
+        bindsym Shift+k resize shrink height 1 px or 1 ppt
+        bindsym Shift+l resize grow width 1 px or 1 ppt
+
+        bindsym Shift+Left resize shrink width 1 px or 1 ppt
+        bindsym Shift+Down resize grow height 1 px or 1 ppt
+        bindsym Shift+Up resize shrink height 1 px or 1 ppt
+        bindsym Shift+Right resize grow width 1 px or 1 ppt
+
+        bindsym Ctrl+h resize shrink width 10 px or 10 ppt
+        bindsym Ctrl+j resize grow height 10 px or 10 ppt
+        bindsym Ctrl+k resize shrink height 10 px or 10 ppt
+        bindsym Ctrl+l resize grow width 10 px or 10 ppt
+
+        bindsym Ctrl+Left resize shrink width 10 px or 10 ppt
+        bindsym Ctrl+Down resize grow height 10 px or 10 ppt
+        bindsym Ctrl+Up resize shrink height 10 px or 10 ppt
+        bindsym Ctrl+Right resize grow width 10 px or 10 ppt
+
+        bindsym h resize shrink width 5 px or 5 ppt
+        bindsym j resize grow height 5 px or 5 ppt
+        bindsym k resize shrink height 5 px or 5 ppt
+        bindsym l resize grow width 5 px or 5 ppt
+
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $win+$alt+r mode "default"
+	
+	#bindcode --release 133 exec --no-startup-id $on_off_bar #mapunmap_polybar.sh
+	#bindcode --release 134 exec --no-startup-id $on_off_bar #mapunmap_polybar.sh
+}
+#recordmydesktop --no-wm-check --device pulse --stop-shortcut Control+Shift+$alt+Delete --pause-shortcut Control+Shift+$alt+Insert --on-the-fly-encoding -o /home/koraynilay/Videos/screencasts/$(date +%Y-%m-%d_%H-%M-%S).ogv
+
+#bar {
+#        status_command i3status
+#}
+
+# to finish
+mode "typing" {
+        bindsym $win+Ctrl+u mode "default"; exec --no-startup-id /home/koraynilay/linux-custom-scripts/switch_typing.sh
+}

@@ -1,0 +1,1 @@
+/home/koraynilay/linux-custom-scripts/i3/exit.sh
