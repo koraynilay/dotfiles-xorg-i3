@@ -419,7 +419,7 @@ bindsym $win+$alt+o exec --no-startup-id viewnior ~/lns/grassi/orario_scuola.png
 bindsym $win+$alt+d exec --no-startup-id discord
 #bindsym $win+$alt+Shift+d exec --no-startup-id open_desktop ~/Desktop/discord-chrome-magkoliahgffibhgfkmoealggombgknl-Default.desktop
 #bindsym $win+$alt+Shift+d exec --no-startup-id discord
-bindsym $win+$alt+Shift+d exec --no-startup-id armcord
+bindsym $win+$alt+Shift+d exec --no-startup-id discord-screenaudio
 bindsym $win+$alt+w exec --no-startup-id ferdium
 bindsym $win+$alt+t exec --no-startup-id telegram-desktop
 # wsCode
