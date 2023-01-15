@@ -210,7 +210,8 @@ for_window [class="battle.net.exe"] move container to workspace $wsSteam
 # wsGames
 for_window [title="(?i)^Assassin's Creed 2$"] move container to workspace $wsGames
 for_window [title="(?i)^Assassin's Creed Unity$"] move container to workspace $wsGames
-for_window [title="(?i)^Assassin's Creed"] move container to workspace $wsGames
+#for_window [title="(?i)^Assassin's Creed"] move container to workspace $wsGames
+for_window [class="(?i)^vampire_survivors$"] move container to workspace $wsGames, fullscreen
 for_window [title="(?i)^osu!lazer$"] move container to workspace $wsGames, fullscreen
 for_window [title="(?i)^osu!$"] move container to workspace $wsGames, fullscreen
 for_window [title="(?i)^Hollow Knight$"] move container to workspace $wsGames
