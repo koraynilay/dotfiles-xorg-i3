@@ -30,6 +30,9 @@ set $wsSteam "27:Steam"
 set $wsComm "28:Discord"
 #set $wsGVE "14:Graphics/Video Editing"
 
+#set $secondary DVI-D-0
+set $secondary HDMI-0
+
 workspace $ws_desktop output primary
 workspace $ws1 output primary
 workspace $ws2 output primary
@@ -40,25 +43,25 @@ workspace $ws6 output primary
 workspace $ws7 output primary
 workspace $ws8 output primary
 workspace $ws9 output primary
-workspace $2ws_desktop output DVI-D-0
-workspace $2ws1 output DVI-D-0
-workspace $2ws2 output DVI-D-0
-workspace $2ws3 output DVI-D-0
-workspace $2ws4 output DVI-D-0
-workspace $2ws5 output DVI-D-0
-workspace $2ws6 output DVI-D-0
-workspace $2ws7 output DVI-D-0
-workspace $2ws8 output DVI-D-0
-workspace $2ws9 output DVI-D-0
+workspace $2ws_desktop output HDMI-0
+workspace $2ws1 output HDMI-0
+workspace $2ws2 output HDMI-0
+workspace $2ws3 output HDMI-0
+workspace $2ws4 output HDMI-0
+workspace $2ws5 output HDMI-0
+workspace $2ws6 output HDMI-0
+workspace $2ws7 output HDMI-0
+workspace $2ws8 output HDMI-0
+workspace $2ws9 output HDMI-0
 workspace $wsNet output primary
-workspace $2wsNet output DVI-D-0
-workspace $wsEm output DVI-D-0
+workspace $2wsNet output HDMI-0
+workspace $wsEm output HDMI-0
 workspace $wsCode output primary
 workspace $wsHW output primary
 workspace $wsGames output primary
 workspace $wsGVE output primary
 workspace $wsSteam output primary
-workspace $wsComm output DVI-D-0
+workspace $wsComm output HDMI-0
 
 #set $2ws_desktop "0:Desktop"
 #set $2ws1 "1"
